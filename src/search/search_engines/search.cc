@@ -40,7 +40,7 @@ bool SearchBase::check_goal(const Task &task,
                        const DBState &state,
                        const SearchNode &node,
                        const SearchSpace<PackedStateT> &space,
-                        std::chrono::duration<double, std::micro> &heuristic_time) const {
+                        std::chrono::duration<double> &heuristic_time) const {
     if (!task.is_goal(state)) return false;
 
     print_goal_found(generator, timer_start, heuristic_time);
@@ -53,4 +53,4 @@ bool SearchBase::check_goal(const Task &task,
 template bool SearchBase::check_goal<SparsePackedState>(
         const Task &task, const SuccessorGenerator &generator, clock_t timer_start,
         const DBState &state, const SearchNode &node, const SearchSpace<SparsePackedState> &space,
-        std::chrono::duration<double, std::micro> &heuristic_time) const;
+        std::chrono::duration<double> &heuristic_time) const;

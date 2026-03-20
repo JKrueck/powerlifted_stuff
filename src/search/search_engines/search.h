@@ -37,7 +37,7 @@ public:
                     const DBState &state,
                     const SearchNode &node,
                     const SearchSpace<PackedStateT> &space,
-                    std::chrono::duration<double, std::micro> &heuristic_time) const;
+                    std::chrono::duration<double> &heuristic_time) const;
 
 protected:
 

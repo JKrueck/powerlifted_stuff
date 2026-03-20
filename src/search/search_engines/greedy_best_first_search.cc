@@ -23,7 +23,7 @@ utils::ExitCode GreedyBestFirstSearch<PackedStateT>::search(const Task &task,
                                                 Heuristic &heuristic)
 {
     using Clock = std::chrono::high_resolution_clock;
-    std::chrono::duration<double, std::micro> tracking_heuristic_cumulative{0};
+    std::chrono::duration<double> tracking_heuristic_cumulative{0};
     cout << "Starting greedy best first search" << endl;
     clock_t timer_start = clock();
     const auto action_schemas = task.get_action_schemas();
